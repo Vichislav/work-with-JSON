@@ -1,13 +1,24 @@
 const sberData = require('./sber.json');
 
+const Data = '04-12-2019';
 
+function getMilliSecTime(data) {
+    let a = data.split('-').reverse(); //превратили в массив и развернули
+    let b = new Date(a); // создали новую дату
+    let c = b.getTime(); // перевили дату в милисекунды
+    return c;
+}
 
-const data = '04.12.2019';
-let a = data.split('.').reverse();
+let arr = sberData.CardInfo
+    .map(card => {
+    currentData = getMilliSecTime(card.ExpDate);
+    return {
+        "CardNumber": card.CardNumber,
+        "CardName": card.CardName,
+        "ExpDate": currentData
+    }
+})
+    .filter(card => card.ExpDate < getMilliSecTime(Data))
+    .map(card => card.CardNumber.substr(12, 4))
 
-b = new Date(a);
-b = b.getTime();
-
-console.log(a);
-console.log(b);
-//console.log(sberData.CardInfo[0].ExpDate);
+console.log(arr);
