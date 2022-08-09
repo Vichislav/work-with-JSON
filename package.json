@@ -1,0 +1,22 @@
+{
+  "name": "sb",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "search.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vichislav/work-with-JSON.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "tanskiy_vv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vichislav/work-with-JSON/issues"
+  },
+  "homepage": "https://github.com/Vichislav/work-with-JSON#readme"
+}
